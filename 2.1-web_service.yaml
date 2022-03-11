@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: webserver
-  name: webserver
+  name: webserver1
 spec:
   ports:
   - port: 8080
@@ -17,7 +17,7 @@ kind: Service
 metadata:
   labels:
     app: webserver
-  name: webserver
+  name: webserver2
 spec:
   ports:
   - port: 8081
@@ -32,7 +32,7 @@ kind: Service
 metadata:
   labels:
     app: webserver
-  name: webserver
+  name: webserver3
 spec:
   ports:
   - port: 8082

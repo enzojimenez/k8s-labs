@@ -13,13 +13,12 @@ spec:
       server: web-server
       tier: testing
   template:
+    metadata:
+      namespace: argocd-tests
+      labels:
+        server: web-server
+        tier: testing
     spec:
-      metadata:
-        namespace: argocd-tests
-        labels:
-          server: web-server
-          tier: testing
       containers:
       - name: web-server
         image: nginx
-  

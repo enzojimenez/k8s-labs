@@ -4,7 +4,7 @@ metadata:
   name: web-server
   namespace: argocd-tests
   labels:
-    server: web-server
+    name: web-server
     tier: testing
 spec:
   replicas: 1

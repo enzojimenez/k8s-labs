@@ -4,16 +4,22 @@ metadata:
   name: web-server
   namespace: argocd-tests
   labels:
-    server: web
+    server: web-server
     tier: testing
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      server: web-server
+      tier: testing
   template:
     spec:
+      metadata:
+        namespace: argocd-tests
+        labels:
+          server: web-server
+          tier: testing
       containers:
       - name: web-server
         image: nginx
-  selector:
-    matchLabels:
-      server: web
-      tier: testing
+  

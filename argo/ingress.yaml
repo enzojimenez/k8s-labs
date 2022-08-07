@@ -6,6 +6,10 @@ metadata:
   name: web-server
   namespace: argocd-tests
 spec:
+  tls:
+    - hosts:
+      - tarjeta-k8s.minube.cr
+      secretName: tarjeta-k8s-minube-cr
   ingressClassName: nginx
   rules:
   - host: tarjeta-k8s.minube.cr
